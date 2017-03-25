@@ -1,22 +1,26 @@
 body {
   background-color: #282828;
 }
-
-.main {
-  margin-top: 120px;
-}
-
-h1 {
+body #title {
   color: #CCFFFF;
+  position: absolute;
   font-family: 'Raleway', sans-serif;
+  width: 100%;
+  margin: 120px auto;
+  z-index: 1;
+  animation-duration: 2s;
+}
+body #title h1 {
   font-size: 96px;
 }
-
-h2 {
-  color: #CCFFFF;
-  font-family: 'Raleway', sans-serif;
+body #title h2 {
   font-size: 16px;
   text-transform: uppercase;
+}
+body canvas {
+  display: block;
+  position: fixed;
+  z-index: -1;
 }
 
 /*# sourceMappingURL=app.css.map */
