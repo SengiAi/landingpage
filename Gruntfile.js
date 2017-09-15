@@ -8,16 +8,16 @@ module.exports = function(grunt) {
                     // compass: true
                 },
                 files: {
-                    'public/css/app.css': 'public/scss/application.scss'
+                    'docs/css/app.css': 'docs/scss/application.scss'
                 }
             }
         },
         cssmin: {
             dist: {
                 files: {
-                    'public/css/app.min.css': 'public/css/app.css',
-                    'public/css/main.min.css': 'public/css/main.css',
-                    'public/css/animate.min.css': 'public/css/animate.css'
+                    'docs/css/app.min.css': 'docs/css/app.css',
+                    'docs/css/main.min.css': 'docs/css/main.css',
+                    'docs/css/animate.min.css': 'docs/css/animate.css'
                 }
             }
         },
@@ -26,14 +26,14 @@ module.exports = function(grunt) {
                 livereload: true
             },
             sass: {
-                files: ['public/scss/*.scss'],
+                files: ['docs/scss/*.scss'],
                 tasks: ['sass']
             },
             styles: {
-                files: ['public/css/*.css'],
+                files: ['docs/css/*.css'],
                 tasks: ['cssmin']
             },
-            files: ['public/**'],
+            files: ['docs/**'],
             tasks: ''
         },
         express: {
@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 options: {
                     port: 3000,
                     hostname: 'localhost',
-                    bases: ['./public'],
+                    bases: ['./docs'],
                     livereload: true
                 }
             }
